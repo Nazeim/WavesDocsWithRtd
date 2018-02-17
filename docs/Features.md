@@ -41,3 +41,7 @@ The full execution cycle for one order is following:
 3. If an amount of a submitted order is a big enough to execute a few order, Matcher creates several transaction. Created transactions have amounts equal to matched counter-order amounts. Matched counter-orders are chosen in order of their acceptance time (First In, First Out).
 
 In every time of order's life it has a certain state, depending on which stage of its life cycle it is now. When order is in order book, but not filled yet - it has "Accepted" state, also it can be "Filled", "Partially Filled" or "Canceled". Orders, which are not fully filled, can be canceled, after that the order will be removed from matcher's order book.
+
+**Matcher fee calculation**
+
+The fix full transaction fee now is equal to *0.003 waves* for one order, whether buying or selling, regardless of the amount of the future deal. The exchange transaction contains two separate fields for Matcher's fee, which goes from buyer's order and seller's order. An order can be fully executed by some transaction, in this case all matcher fee from it is included in that transaction.
