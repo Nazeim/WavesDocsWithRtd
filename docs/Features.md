@@ -44,4 +44,4 @@ In every time of order's life it has a certain state, depending on which stage o
 
 **Matcher fee calculation**
 
-The fix full transaction fee now is equal to *0.003 waves* for one order, whether buying or selling, regardless of the amount of the future deal. The exchange transaction contains two separate fields for Matcher's fee, which goes from buyer's order and seller's order. An order can be fully executed by some transaction, in this case all matcher fee from it is included in that transaction.
+The fix full transaction fee now is equal to **0.003 waves** for one order, whether buying or selling, regardless of the amount of the future deal. The exchange transaction contains two separate fields for Matcher's fee, which goes from buyer's order and seller's order. An order can be fully executed by some transaction, in this case all matcher fee from it is included in that transaction.
