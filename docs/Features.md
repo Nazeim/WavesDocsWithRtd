@@ -23,8 +23,13 @@ A user initiates his willingness to purchase or sale assets by creating, signing
 Figure 1
 
 User can set an expiration time (maximum timestamp) to the order, and when the order expires it will be automatically canceled. One of the rules at DEX is that all orders older than 30 days will be canceled by default. An expiration time for each order is specified by the user at the time the order is signed. The expiration time is a long integer value that represents the absolute number of seconds since the unix epoch. When order is unfilled and its expiration time is more than now unix timestamp, it can be canceled by user. In this case the order get into blockchain as Cancelled order and nobody can fill it sinse that.
+
 The full execution cycle for one order is following:
+
 1. If for a submitted order there is no counter-order matched by price, then order would be put in the corresponding order book.
+
 2. If there is a counter-order that matches with the submitted order, then the order execution is performed. That means the counter-order is removed from order book and the matcher creates exchange transaction, signs it by matcher's private key and is sent to the Waves network for including in the blockchain.
+
 3. If an amount of a submitted order is a big enough to execute a few order, Matcher creates several transaction. Created transactions have amounts equal to matched counter-order amounts. Matched counter-orders are chosen in order of their acceptance time (First In, First Out).
+
 In every time of order's life it has a certain state, depending on which stage of its life cycle it is now. When order is in order book, but not filled yet - it has "Accepted" state, also it can be "Filled", "Partially Filled" or "Canceled". Orders, which are not fully filled, can be canceled, after that the order will be removed from matcher's order book.
