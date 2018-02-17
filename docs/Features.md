@@ -20,3 +20,4 @@ The orders are linked in pairs by individual nodes, which work as Matcher. Befor
 A user initiates his willingness to purchase or sale assets by creating, signing and sending a Limit Order request to the Matcher node. The Limit Order here is the same as at all exchanges: an order for a buy (sell) of fixed number of token at a price equal or better than specified.When a new Order is submitted to the DEX all its fields are checked for adequacy and a signature is validated by sender's public key. Then, the Order is validated, based on internal Matcher state: Order with such id should not exist already and sum of all Order amounts for a particular asset should be less or equal to balance of that asset on sender's account. The scheme of work with the DEX is shown in the Figure 1:
 
 ![image](img/DEX1.png)
+![Waves Matcher](img/DEX1.png)
