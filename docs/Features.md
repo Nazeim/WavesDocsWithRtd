@@ -61,5 +61,6 @@ There are 3 different orders (Figure 2): two buy orders and one sell. For each f
 
 Thus, the fee that the matcher gets from users for these transactions is **0.0021 - 0.0006  = 0.0015 waves**. And the fee that the matcher pays to miners is **0.006 waves**.
 
-![](/images/2018/02/matcher.png)
-Figure 2: example of matcher's fee work, TX1 - Transaction1, TX2 - Transaction2, Ord1 - Order1, Ord2 - Order2, Ord3 - Order3
+![matcher](assets/markdown-img-paste-20180217205420231.png)
+
+Figure 2: example of matcher's fee work, TX1 - Transaction1, TX2 - Transaction2, Ord1 - Order1, Ord2 - Order2, Ord3 - Order3.
