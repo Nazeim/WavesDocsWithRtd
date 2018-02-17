@@ -45,3 +45,18 @@ In every time of order's life it has a certain state, depending on which stage o
 **Matcher fee calculation**
 
 The fix full transaction fee now is equal to **0.003 waves** for one order, whether buying or selling, regardless of the amount of the future deal. The exchange transaction contains two separate fields for Matcher's fee, which goes from buyer's order and seller's order. An order can be fully executed by some transaction, in this case all matcher fee from it is included in that transaction.
+
+If the order is **partially** executed by some deal-transaction, matcherFee is included in that transaction proportionally to the executed amount, i.e.
+
+                          **executedAmount * orderMatcherFee / orderAmount.**
+
+The remaining matcher fee for this order will be included into other transactions until order's fully execution.
+
+Example:
+There are 3 different orders (Figure 2): two buy orders and one sell. For each full order user have to pay exactly 0.003 waves of fee, and this fee will be written off as the order is executed. In our example:
+
+* the Order1 is fully matched with a 70% part of Order3 by Transaction1 and matcher's fee for this transaction is equal to 0.003 + 0.0021 - 0.003 = 0.0021 waves since Matcher pay to miners transaction fee wich is also equal to 0.003 waves .
+
+* The 50% of Order2 matches with 30% part of Order3 by Transaction2 and matcher's fee for this transaction is equal to 0.0009 + 0.0015 - 0.003 = -0.0006 waves.
+
+Thus, the fee that the matcher gets from users for these transactions is **0.0021 - 0.0006  = 0.0015 waves**. And the fee that the matcher pays to miners is **0.006 waves**.
