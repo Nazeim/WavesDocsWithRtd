@@ -6,10 +6,15 @@ The need to convert and exchange between crypto tokens is increasing with the en
 **Decentralized Exchange**
 
 The decentralize exchanges do not require users to trust them with their money: user's wallet do not controlled by a single entity. Orders are digitally signed directly by owners, as an authorization process. Users control their funds, but on-chain trading have the side effect of not real-time trading as at a centralized exchange.
+
 Decentralized exchanges have some advantages over centralized, but also drawbacks.
+
 If all components of exchange are decentralized there is no automatic matching of buy and sell orders, this operation also should be done by users. For example for specific order, which is validated and put in order book, any other user can add a digitally signed counterorder and send the complete transaction with pair of orders to the blockchain. Then the assets are transferred between the buyer and seller.
+
 Due to decentralized nature of matching, for signed order's cancellation should be created an individual on-chain transaction, and users unable to quickly cancel their orders in response to market fluctuations. The user should pay fee for transaction's cancellation, and this is the point when an arbitrageur may intervene, pay a higher fee and race against the cancellation transaction.
+
 Also with such lack of automatic matching and fast cancellation, there is vulnerability to miner front-running. The miner of the next block will always have the option to execute cancelled orders with themselves as the counterparty, potentially profiting from such an order.
+
 What if we decentralize not all component of exchange, but only the matcher part? This design eliminates two of the described problems above: the arbitrageur with already cancelled orders, and miners front-running. Unlike centralized exchanges, the decentralized solution with centralized matcher won’t have the power to steal users’ deposits.
 
 **Waves DEX**
