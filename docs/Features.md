@@ -64,3 +64,10 @@ Thus, the fee that the matcher gets from users for these transactions is **0.002
 ![matcher](assets/markdown-img-paste-20180217205420231.png)
 
 Figure 2: example of matcher's fee work, TX1 - Transaction1, TX2 - Transaction2, Ord1 - Order1, Ord2 - Order2, Ord3 - Order3.
+
+**Summary**
+
+period  |  matcher's fee |  miner's fee | left for the matcher
+--|---|---|--
+last month  | 681.42336675 waves   | 569.721 waves  | 16.39%
+all time | 3476.01418346 waves  | 2824.771 waves    | 18.74%
