@@ -3,4 +3,4 @@ site_name: Waves Documentation
 pages:
     - Platform Features: Features.md
 
-theme: rtd-dropdown
+theme: readthedocs
