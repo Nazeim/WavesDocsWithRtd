@@ -1,7 +1,7 @@
 site_name: Waves Documentation
 
 pages:
-
+    - Overview : index.md
     - Platform Features: Features.md
 
 theme: readthedocs
