@@ -49,7 +49,7 @@ The fix full transaction fee now is equal to **0.003 waves** for one order, whet
 
 If the order is **partially** executed by some deal-transaction, matcherFee is included in that transaction proportionally to the executed amount, i.e.
 
-                          **executedAmount * orderMatcherFee / orderAmount.**
+                          **executedAmount x orderMatcherFee / orderAmount.**
 
 The remaining matcher fee for this order will be included into other transactions until order's fully execution.
 
