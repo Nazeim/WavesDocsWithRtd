@@ -2,8 +2,8 @@ site_name: Waves Documentation
 
 pages:
     - Overview: 
-    - 'How To Use This Guide': 'how-to-use-this-guide.md'
-    - 'Platform Components': 'platform-components.md'
+        - 'How To Use This Guide': 'how-to-use-this-guide.md'
+        - 'Platform Components': 'platform-components.md'
         
 
 theme: readthedocs
